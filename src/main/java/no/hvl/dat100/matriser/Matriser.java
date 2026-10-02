@@ -9,6 +9,8 @@ public class Matriser {
 		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 	}
 
+	//YOOO
+
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
