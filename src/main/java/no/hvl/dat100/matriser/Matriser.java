@@ -85,4 +85,52 @@ public class Matriser {
 		}
 		return nyMatrise;
 	}
+
+	//6a 
+	public static int[][] speile(int[][] matrise) {
+
+    int[][] resultat = new int[matrise.length][matrise.length];
+
+    // Kopierer matrisen
+    for (int i = 0; i < matrise.length; i++) {
+        for (int j = 0; j < matrise.length; j++) {
+            resultat[i][j] = matrise[i][j];
+        }
+    }
+
+    // Speiler matrisen
+    for (int i = 0; i < resultat.length; i++) {
+        for (int j = 0; j < resultat.length / 2; j++) {
+
+            int temp = resultat[i][j];
+
+            resultat[i][j] = resultat[i][resultat.length - 1 - j];
+
+            resultat[i][resultat.length - 1 - j] = temp;
+        }
+    }
+
+    return resultat;
+   }
+
+   //b 
+
+   public static int[][] multipliser(int[][] a, int[][] b) {
+
+    int[][] resultat = new int[a.length][b[0].length];
+
+    for (int i = 0; i < a.length; i++) {
+        for (int j = 0; j < b[0].length; j++) {
+
+            for (int k = 0; k < b.length; k++) {
+                resultat[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    return resultat;
+    }
 }
+
+
+
