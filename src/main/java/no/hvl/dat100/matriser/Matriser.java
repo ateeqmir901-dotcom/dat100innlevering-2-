@@ -58,60 +58,25 @@ public class Matriser {
 		return true;
 	}
 	
-	// e) 
-	public static int[][] speile(int[][] matrise) {
-		int rader = matrise.length;
-		int kolonner = matrise[0].length;
-		int[][] nyMatrise = new int[kolonner][rader];
-		
-		for (int i = 0; i < rader; i++) {
-			for (int j = 0; j < kolonner; j++) {
-				nyMatrise[j][i] = matrise[i][j];
-			}
-		}
-		return nyMatrise;
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-		int[][] nyMatrise = new int[a.length][b[0].length];
-		
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < b[0].length; j++) {
-				for (int k = 0; k < a[0].length; k++) {
-					nyMatrise[i][j] += a[i][k] * b[k][j];
-				}
-			}
-		}
-		return nyMatrise;
-	}
-
+	
+	
 	//6a 
 	public static int[][] speile(int[][] matrise) {
 
-    int[][] resultat = new int[matrise.length][matrise.length];
+		int rad = matrise.length;
+		int kolonne = matrise[0].length;
 
-    // Kopierer matrisen
-    for (int i = 0; i < matrise.length; i++) {
-        for (int j = 0; j < matrise.length; j++) {
-            resultat[i][j] = matrise[i][j];
+    int[][] resultat = new int[kolonne][rad];
+
+   
+    for (int i = 0; i < rad; i++) {
+        for (int j = 0; j < kolonne; j++) {
+            resultat[j][i] = matrise[i][j];
         }
     }
-
-    // Speiler matrisen
-    for (int i = 0; i < resultat.length; i++) {
-        for (int j = 0; j < resultat.length / 2; j++) {
-
-            int temp = resultat[i][j];
-
-            resultat[i][j] = resultat[i][resultat.length - 1 - j];
-
-            resultat[i][resultat.length - 1 - j] = temp;
-        }
-    }
-
-    return resultat;
+  	return resultat;
    }
+
 
    //b 
 
